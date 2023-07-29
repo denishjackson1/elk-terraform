@@ -76,6 +76,7 @@ With this, you have successfully deployed ELK and MetricBeat using terraform.
 
 References
 
-https://www.terraform.io/
+https://www.terraform.io
+
 https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
 
