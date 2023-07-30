@@ -16,7 +16,7 @@ resource "aws_instance" "elk-app-instance" {
   connection {
     type = "ssh"
     host = aws_instance.elk-app-instance.public_ip
-    user = "ubuntu"
+    user = var.INSTANCE_USERNAME
     private_key = file(var.PATH_TO_PRIVATE_KEY)
   }
   
