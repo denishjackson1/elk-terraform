@@ -1,3 +1,17 @@
+variable "ami" {
+  default = "ami-053b0d53c279acc90"
+  type= string
+  description = "The id of the machine image (AMI) to use"
+    validation {
+      condition = substr(var.ami, 0,4) == "ami-"
+      error_message= "The AMI should start with \"ami-\"."
+    }
+}
+
+variable "instance_type" {
+  default = "t2.micro"
+}
+
 variable "INSTANCE_USERNAME" {
   description = "Username for SSH connection"
   type        = string
